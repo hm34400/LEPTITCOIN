@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ajouter annonce</title>
+        <link rel="stylesheet" href="{{asset('bundles/framework/css/form.css')}}"/>
+    </head>
+    <body>
+        
+        {{form_start(formAnnonce,{'attr':{'action':path('valid')}})}}
+        {{form_rest(formAnnonce)}}
+        {{form_end(formAnnonce)}}
+        
+    </body>
+</html>

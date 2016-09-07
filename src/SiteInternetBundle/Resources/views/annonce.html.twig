@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--Type du document-->
+<HTML lang="fr"><!--Référencement du document en langue française-->
+    <Head>
+        <meta charset="utf-8"><!--Balise pour écoder les caractères spéciaux-->
+        <link rel="stylesheet" href="{{asset('bundles/framework/css/bootstrap.css')}}"/>
+        <link rel="stylesheet" href="{{asset('bundles/framework/css/style.css')}}"/>
+        <!--Balises pour lier tous les fichiers CSS-->
+        <script src="{{asset('bundles/framework/js/jquery.js')}}"></script>
+        <title>{% block title %} Annonce {% endblock %}</title>
+    </Head>
+
+    <Body>
+        
+            {#<p>{{annonce.Titre}}</p>
+            <p>{{annonce.Image}}</p>
+            <p>{{annonce.Description}}</p>
+            <p>{{annonce.Prix}}</p>
+            <p>{{annonce.Vendeur}}</p>
+            {#<p>{{annonce.Date_de_parution|date('dd-mm-yyyy')}}</p>
+            <p>{{annonce.Tel}}</p>
+            <p>{{annonce.Categorie}}</p>
+            <p>{{annonce.Localite}}</p>#}
+            <header><h1>Le Ptit Coin</h1></header>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#annonce">Annonce</a></li>
+                        <li><a href="#">jfbhesb</a></li>  
+                    </ul>
+                </div>
+            </nav>
+
+            <p><a name="annonce">Première annonce</a></p>
+            {%for annonce in annonce%}
+            <ul class="annonce_1">
+                <li><p>{{annonce.Titre}}</p></li>
+                <li><p>{{annonce.Image}}</p></li>
+                <li><p>{{annonce.Description}}</p></li>
+                <li><p>{{annonce.Prix}}</p></li>
+                <li><p>{{annonce.Vendeur}}</p></li>
+                        {#<li><p>{{annonce.Date_de_parution|date('dd-mm-yyyy')}}</p></li>#}
+                <li><p>{{annonce.Tel}}</p></li>
+                <li><p>{{annonce.Categorie}}</p></li>
+                <li><p>{{annonce.Localite}}</p></li>  
+            </ul>
+        {% endfor %}
+        <a href="{{path("form")}}">Ajouter une annonce</a>
+    </Body>
+
+</html>

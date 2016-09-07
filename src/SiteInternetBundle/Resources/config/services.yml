@@ -1,0 +1,4 @@
+services:
+#    site_internet.example:
+#        class: SiteInternetBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
